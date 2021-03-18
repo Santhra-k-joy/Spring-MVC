@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Spring MVC Demo</title>
+<link
+	href="https://bootswatch.com/4/united/bootstrap.min.css"
+	rel="stylesheet">
+
+</head>
+<body>
+<h1>Spring MVC Demo</h1>
+<hr>
+<p>Product Management Server</p>
+<ul>
+<li><a href="./product-list">List all</a></li>
+</ul>
+</body>
+</html>

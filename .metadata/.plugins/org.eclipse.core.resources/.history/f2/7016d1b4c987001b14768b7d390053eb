@@ -1,0 +1,39 @@
+package com.epsilon.training.cfg;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRegistration.Dynamic;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.WebApplicationInitializer;
+import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
+import org.springframework.web.servlet.DispatcherServlet;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+
+import lombok.extern.slf4j.Slf4j;
+
+
+@Slf4j
+@Configuration
+@EnableWebMvc
+@ComponentScan(basePackages= {"com.epsilon.training.web"})
+public class AppConfig implements WebApplicationInitializer{ //but we need to tell tomcat that this class is the config file
+
+	public AppConfig()
+	{
+		log.debug("AppConfig instantiated");
+	}
+
+	public void onStartup(ServletContext servletContext) throws ServletException {
+
+    log.debug("AppConfig.onStartup() called");
+		//we are creating new spring container and register this apconfig with the container
+	AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
+	ctx.register(AppConfig.class);
+	
+	Dynamic ds = servletContext.addServlet("ds", new DispatcherServlet(ctx));
+	ds.addMapping("/");
+	ds.setLoadOnStartup(1);
+	}
+}

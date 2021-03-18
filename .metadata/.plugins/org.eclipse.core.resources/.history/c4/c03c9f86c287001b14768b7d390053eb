@@ -1,0 +1,17 @@
+package com.epsilon.training.web.controller;
+
+import org.springframework.stereotype.Controller;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Controller //qualifies for component scan
+public class ProductController {
+
+	
+	public String getAllProducts()
+	{
+		log.debug("from ProductController.getAllProducts()" );
+		return "/show-products.jsp";
+	}
+}

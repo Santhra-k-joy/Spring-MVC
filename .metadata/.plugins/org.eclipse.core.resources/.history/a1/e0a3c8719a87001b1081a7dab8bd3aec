@@ -1,0 +1,18 @@
+package com.epsilon.training.aop;
+
+import org.slf4j.Logger;
+
+import jdk.internal.org.jline.utils.Log;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+public class LoggerAspect {
+
+	public LoggerAspect() {
+		    log.info("");
+		}
+	
+
+	
+	
+}

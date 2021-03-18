@@ -1,0 +1,6 @@
+package com.epsilon.training.cfg;
+@Configutration
+
+public class AppConfig {
+
+}

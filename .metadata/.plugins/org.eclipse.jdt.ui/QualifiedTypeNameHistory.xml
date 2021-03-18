@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.epsilon.training.aop.LoggerAspect"/>
+    <fullyQualifiedTypeName name="sun.util.logging.resources.logging"/>
+    <fullyQualifiedTypeName name="lombok.extern.slf4j.Slf4j"/>
+    <fullyQualifiedTypeName name="jdk.internal.org.jline.utils.Log"/>
+</qualifiedTypeNameHistroy>

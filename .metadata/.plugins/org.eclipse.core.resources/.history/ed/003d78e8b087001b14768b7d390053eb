@@ -1,0 +1,10 @@
+package com.epsilon.training.web.resources;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RequestMapping("/api/products")
+@Controller
+public class ProductResource {
+
+}

@@ -1,0 +1,5 @@
+package com.epsilon.training.web.resources;
+
+public class ProductResource {
+
+}

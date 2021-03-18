@@ -1,0 +1,22 @@
+package com.epsilon.training.aop;
+
+@Slf4j
+@Component
+@Aspect
+public class DataSanitizerAspect {
+	
+	public DataSanitizerAspect() {
+//		log.info("Initiating DataSanatizerAspect constructor");
+	}
+	
+	@Around("execution (* com.epsilon..Pro*Dao.find*(double,double))")
+	public Object checkAndSwap(ProceedingJoinPoint pjp) throws Throwable {
+		Object[] args = pjp.getArgs();
+		double min = Double.parseDouble(args[0].toString());
+		double max = Double.parseDouble(args[1].toString());
+		if(min>max) {
+			args = new Object[] {max,min};
+		}
+		return pjp.proceed(args);
+	}
+}
